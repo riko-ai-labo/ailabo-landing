@@ -1,5 +1,11 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure hero title displays correctly without JavaScript interference
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        // Reset any potential JavaScript modifications
+        heroTitle.style.opacity = '1';
+    }
     // Mobile navigation toggle
     const hamburger = document.querySelector('.nav-hamburger');
     const navMenu = document.querySelector('.nav-menu');
