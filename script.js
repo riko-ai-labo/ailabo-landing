@@ -136,24 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Typing effect for hero title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.innerHTML;
-        heroTitle.innerHTML = '';
-        heroTitle.style.opacity = '1';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        };
-        
-        setTimeout(typeWriter, 1000);
-    }
+    // Remove typing effect to prevent HTML tag display issues
+    // Hero title will display normally without animation
     
     // Parallax effect for hero section
     const hero = document.querySelector('.hero');
